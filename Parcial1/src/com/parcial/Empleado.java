@@ -13,13 +13,12 @@ public class Empleado {
         this.puesto=puesto;
         this.salario=salario;
     }
-    public void addDocumentos(){
+    public void addDocumentos(Documento documento){
 
     }
-    public void removeDocumento(){
+    public void removeDocumento(String nombre){
 
     }
-
     public List<Documento> getDocumentos() {
         return documentos;
     }
