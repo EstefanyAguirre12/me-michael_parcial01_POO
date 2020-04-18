@@ -19,12 +19,15 @@ public class Empresa {
         return planilla;
     }
 
-    public void addEmpleado(String Empleado){
+    public void addEmpleado(Empleado datos){
+
+    planilla.add(datos);
 
     }
 
     public void quitEmpelado(String Empleado){
 
+        planilla.remove(Empleado);
     }
 }
 
