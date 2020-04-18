@@ -1,24 +1,51 @@
 package com.EEAR.x00041319;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Empleado {
     protected String nombre;
     protected String puesto;
     protected double salario;
-    protected List<Documento> documentos;
+    protected ArrayList<Documento> documentos;
 
     public Empleado(String nombre, String puesto, double salario){
         this.nombre=nombre;
         this.puesto=puesto;
         this.salario=salario;
+        documentos=new ArrayList<>();
     }
     public void addDocumentos(Documento documento){
+        try{
+            boolean existe = false;
 
-    }
-    public void removeDocumento(String nombre){
+            for(Documento a : documentos){
+                if(a.getNumero().equals(documento.getNumero()))
+                    existe = true;
+            }
 
+            if(existe)
+                throw new AlreadyExistAppException("Ya existe un documento con ese numero");
+
+            documentos.add(documento);
+        }
+        catch(AlreadyExistAppException ex){
+            System.out.println(ex.getMessage());
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
     }
-    public List<Documento> getDocumentos() {
+    public void removeDocumento(String nombre) throws NotFoundException {
+        Documento aux = null;
+        for(Documento doc : documentos){
+            if(doc.getNombre().equals(nombre))
+                aux = doc;
+        }
+        if(aux != null)
+            documentos.remove(aux);
+        else
+            throw new NotFoundException("Aplicacion no encontrada, no es posible desinstalar");
+    }
+    public ArrayList<Documento> getDocumentos() {
         return documentos;
     }
 
