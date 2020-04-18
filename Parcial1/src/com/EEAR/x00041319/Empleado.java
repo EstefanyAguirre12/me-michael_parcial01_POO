@@ -1,7 +1,7 @@
 package com.EEAR.x00041319;
 import java.util.ArrayList;
 
-public class Empleado {
+public abstract class Empleado {
     protected String nombre;
     protected String puesto;
     protected double salario;
