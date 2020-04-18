@@ -1,4 +1,4 @@
-package com.parcial;
+package com.EEAR.x00041319;
 
 public class Documento {
     private String nombre;

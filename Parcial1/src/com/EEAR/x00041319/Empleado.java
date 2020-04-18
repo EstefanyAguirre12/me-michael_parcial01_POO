@@ -1,5 +1,4 @@
-package com.parcial;
-
+package com.EEAR.x00041319;
 import java.util.List;
 
 public class Empleado {
