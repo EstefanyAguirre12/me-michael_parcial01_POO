@@ -7,6 +7,7 @@ public class Empresa {
     private String nombre;
     List<Empleado> planilla;
 
+//dfsdfsrg
     public void Empresa(String name){
         this.nombre =nombre;
     }
