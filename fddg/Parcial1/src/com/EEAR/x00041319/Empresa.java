@@ -11,6 +11,7 @@ public class Empresa {
     public void Empresa(String name){
         this.nombre =nombre;
     }
+    /*ijim*/
 
     public String getNombre() {
         return nombre;
